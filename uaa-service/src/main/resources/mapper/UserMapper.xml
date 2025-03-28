@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ant.uaa.mapper.UserMapper">
-    <select id="findByUsername" resultType="com.ant.user.model.UserDO">
+    <select id="findByUsername" resultType="com.ant.uaa.model.entity.UserDO">
         SELECT * FROM users WHERE username = #{username}
     </select>
-    <insert id="insertUser" parameterType="com.ant.user.model.UserDO" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO user (username, password, role) VALUES (#{username}, #{password}, #{role})
-    </insert>
 </mapper>

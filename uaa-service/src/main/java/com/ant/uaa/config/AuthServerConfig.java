@@ -19,6 +19,9 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
 @EnableAuthorizationServer
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
+    private static final String CLIENT_SECRET = "123456";
+    private static final int TOKEN_EXPIRE_TIME = 1 * 3600;//1小时过期
+
     @Autowired
     private TokenStore redisTokenStore;
 
@@ -36,11 +39,11 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("uaa-service")
-                .secret(passwordEncoder.encode("123456"))
+                .secret(passwordEncoder.encode(CLIENT_SECRET))
                 .scopes("service")
                 .autoApprove(true)
                 .authorizedGrantTypes("implicit", "refresh_token", "password", "authorization_code")
-                .accessTokenValiditySeconds(24 * 3600);//24小时过期
+                .accessTokenValiditySeconds(TOKEN_EXPIRE_TIME);
     }
 
     @Override

@@ -24,9 +24,9 @@ public class AuthService implements UserDetailsService {
             throw new UsernameNotFoundException("用户不存在");
         }
         return new org.springframework.security.core.userdetails.User(
-                user.getUsername(), user.getPassword(), Arrays.asList(new SimpleGrantedAuthority(user.getRole()))
+                user.getUsername(),
+                user.getPassword(),
+                Arrays.asList(new SimpleGrantedAuthority(user.getRole()))
         );
     }
-
-
 }
