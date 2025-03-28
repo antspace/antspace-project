@@ -1,7 +1,7 @@
-package com.ant.central.service;
+package com.ant.uaa.service;
 
-import com.ant.central.mapper.UserMapper;
-import com.ant.central.model.entity.UserDO;
+import com.ant.uaa.mapper.UserMapper;
+import com.ant.uaa.model.entity.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,8 +28,5 @@ public class AuthService implements UserDetailsService {
         );
     }
 
-    public void registerUser(UserDO user) {
-        user.setRole("ROLE_USER"); // 默认角色
-        userMapper.insertUser(user);
-    }
+
 }

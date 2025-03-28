@@ -1,12 +1,13 @@
-package com.ant.userservice;
+package com.ant.uaa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserServiceApp {
+public class UaaServiceApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserServiceApp.class, args);
+		SpringApplication.run(UaaServiceApp.class, args);
 	}
+
 }

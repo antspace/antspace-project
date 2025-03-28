@@ -1,4 +1,4 @@
-package com.ant.central.config;
+package com.ant.uaa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

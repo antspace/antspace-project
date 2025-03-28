@@ -1,4 +1,4 @@
-package com.ant.central.config;
+package com.ant.uaa.config;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

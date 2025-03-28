@@ -1,6 +1,6 @@
-package com.ant.central.config;
+package com.ant.uaa.config;
 
-import com.ant.central.service.AuthService;
+import com.ant.uaa.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

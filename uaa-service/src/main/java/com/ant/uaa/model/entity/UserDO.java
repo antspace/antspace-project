@@ -1,4 +1,4 @@
-package com.ant.central.model.entity;
+package com.ant.uaa.model.entity;
 
 import lombok.Data;
 
@@ -9,4 +9,3 @@ public class UserDO {
     private String password;
     private String role;
 }
-

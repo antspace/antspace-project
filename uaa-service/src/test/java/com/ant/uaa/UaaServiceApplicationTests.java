@@ -1,4 +1,4 @@
-package com.ant.central;
+package com.ant.uaa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
