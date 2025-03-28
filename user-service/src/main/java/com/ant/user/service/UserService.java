@@ -1,6 +1,7 @@
 package com.ant.user.service;
 
 import com.ant.user.mapper.UserMapper;
+import com.ant.user.model.entity.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

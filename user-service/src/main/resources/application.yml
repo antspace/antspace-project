@@ -1,3 +1,33 @@
+# ??????
+debug: true
+
+# ????
+server:
+  port: 8081
+
 spring:
-  application:
-  name: user-service
+  datasource: # mysql?????
+    url: jdbc:mysql://localhost:3306/oauth2_db?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis: # redis?????
+    host: r-bp1k5i6rjxuvr6tvc2pd.redis.rds.aliyuncs.com
+    port: 6379
+    password: ant-space2025
+    database: 0
+
+# mybatis??
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+# jks????
+security:
+  jwt:
+    keystore:
+      path: antspace.jks
+      password: alien123.
+      key-alias: antspacekey
+      key-password: alien123.
