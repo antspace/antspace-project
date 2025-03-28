@@ -5,14 +5,19 @@ debug: true
 server:
   port: 8080
 
-# mysql数据库配置
 spring:
-  datasource:
+  datasource: # mysql数据库配置
     url: jdbc:mysql://localhost:3306/oauth2_db?useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+  redis: # redis数据库配置
+    host: r-bp1k5i6rjxuvr6tvc2pd.redis.rds.aliyuncs.com
+    port: 6379
+    password: ant-space2025
+    database: 0
 
+# mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
@@ -22,7 +27,7 @@ mybatis:
 security:
   jwt:
     keystore:
-      path: /antspace.jks
+      path: antspace.jks
       password: alien123.
       key-alias: antspacekey
       key-password: alien123.

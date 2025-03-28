@@ -5,6 +5,6 @@
         SELECT * FROM users WHERE username = #{username}
     </select>
     <insert id="insertUser" parameterType="com.ant.central.model.entity.UserDO" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO users (username, password, role) VALUES (#{username}, #{password}, #{role})
+        INSERT INTO user (username, password, role) VALUES (#{username}, #{password}, #{role})
     </insert>
 </mapper>
