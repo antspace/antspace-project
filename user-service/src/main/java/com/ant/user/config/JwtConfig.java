@@ -15,13 +15,11 @@ import java.io.IOException;
 
 @Configuration
 public class JwtConfig {
-    @Autowired
-    JwtAccessTokenConverter jwtAccessTokenConverter;
 
     @Bean
     @Qualifier("tokenStore")
     public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter);
+        return new JwtTokenStore(jwtTokenEnhancer());
     }
 
     @Bean
