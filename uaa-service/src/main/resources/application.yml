@@ -1,3 +1,4 @@
+
 # 开启调试模式
 debug: true
 
@@ -6,6 +7,8 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: uaa-service
   datasource: # mysql数据库配置
     url: jdbc:mysql://localhost:3306/oauth2_db?useSSL=false
     username: root
@@ -31,3 +34,9 @@ security:
       password: alien123.
       key-alias: antspacekey
       key-password: alien123.
+
+# eureka配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
