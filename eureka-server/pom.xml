@@ -12,7 +12,7 @@
 	<artifactId>eureka-server</artifactId>
 	<version>1.0.0</version>
 	<name>eureka-server</name>
-	<description>注册发现中心</description>
+	<description>服务注册中心</description>
 
 	<dependencies>
 		<dependency>

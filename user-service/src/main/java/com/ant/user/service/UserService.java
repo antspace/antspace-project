@@ -9,6 +9,7 @@ import com.ant.user.model.entity.UserDO;
 import com.ant.user.util.BPwdEncoderUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -31,7 +32,7 @@ public class UserService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("用户不存在");
         }
-        return new org.springframework.security.core.userdetails.User(
+        return new User(
                 user.getUsername(),
                 user.getPassword(),
                 Arrays.asList(new SimpleGrantedAuthority(user.getRole()))

@@ -8,6 +8,16 @@ server:
 spring:
   application:
     name: user-service
+  cloud:
+    nacos: #nacos配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+    loadbalancer:
+      health-check:
+        interval: 30s
+        initial-delay: 0s
+      cache:
+        enabled: true
   datasource: # mysql数据库配置
     url: jdbc:mysql://localhost:3306/oauth2_db?useSSL=false
     username: root
@@ -37,9 +47,3 @@ security:
 feign:
   hystrix:
     enabled: true
-
-# eureka配置
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8082/eureka/
